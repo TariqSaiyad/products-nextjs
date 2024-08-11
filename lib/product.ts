@@ -7,7 +7,15 @@ export async function getAllProducts(limit = 30) {
       next: { revalidate: 10 },
     }
   );
+
+  console.log(response);
+
+
+
   const json = await response.json();
+  console.log(json);
+
+
   return json.products as Product[];
 }
 
