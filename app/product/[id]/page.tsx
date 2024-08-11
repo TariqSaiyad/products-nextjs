@@ -6,7 +6,7 @@ export const revalidate = 10;
 // export const dynamic = 'force-static'
 
 export async function generateStaticParams() {
-  return [{ id: '1' }];
+  return [{ id: "1" }];
 }
 
 export default async function ProductPage({ params }: { params: any }) {
@@ -14,7 +14,7 @@ export default async function ProductPage({ params }: { params: any }) {
     await getProduct(params.id);
   return (
     <main className="flex min-h-screen flex-col px-24 py-8">
-      <Header/>
+      <Header />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
         <div className="flex flex-col md:flex-row -mx-4">
           <div className="md:flex-1 px-4">
