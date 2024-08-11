@@ -20,4 +20,5 @@ export async function getProduct(id: string) {
   console.log(data);
 
   return data as Product;
+
 }

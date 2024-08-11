@@ -5,13 +5,15 @@ import Image from "next/image";
 export const revalidate = 10;
 // export const dynamic = 'force-static'
 
-export async function generateStaticParams() {
-  return [{ id: "1" }];
-}
+// export async function generateStaticParams() {
+//   return [{ id: "1" }];
+// }
 
 export default async function ProductPage({ params }: { params: any }) {
-  const { title, description, images, thumbnail, price, brand } =
-    await getProduct(params.id);
+  const { title, description, images, price, brand } = await getProduct(
+    params.id
+  );
+
   return (
     <main className="flex min-h-screen flex-col px-24 py-8">
       <Header />
