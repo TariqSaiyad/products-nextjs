@@ -2,7 +2,7 @@
 const nextConfig = {
   output: "standalone",
   images: {
-    remotePatterns: [{ hostname: "i.dummyjson.com" }],
+    remotePatterns: [{ hostname: "cdn.dummyjson.com" }],
   },
 };
 

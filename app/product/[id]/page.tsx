@@ -17,12 +17,13 @@ export default async function ProductPage({ params }: { params: any }) {
       <Header />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
         <div className="flex flex-col md:flex-row -mx-4">
-          <div className="md:flex-1 px-4">
+          <div className="md:flex-1 px-4 flex justify-center">
             <Image
-              src={thumbnail}
+              src={images[0]}
               alt={title}
-              height={320}
-              width={592}
+              height={200}
+              width={400}
+              className="h-auto w-auto"
               style={{ objectFit: "cover" }}
             />
           </div>

@@ -15,8 +15,8 @@ export async function getAllProducts(limit = 30) {
 
 export async function getProduct(id: string) {
   console.time(`getProduct: ${id}`);
-  const response = await fetch(`https://dummyjson.com/products/${id}`,{
-    next:{revalidate:10}
+  const response = await fetch(`https://dummyjson.com/products/${id}`, {
+    next: { revalidate: 10 }
   });
   console.timeEnd(`getProduct: ${id}`);
   return (await response.json()) as Product;
